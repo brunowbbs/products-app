@@ -6,7 +6,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 // import SignInScreen from '../screens/SignIn';
 
 import {RootStackParamList} from './types';
-import SignUpScreen from '../screens/SignUp';
+// import SignUpScreen from '../screens/SignUp';
+import InitialScreen from '../screens/Initial';
 
 const Stack = createStackNavigator<RootStackParamList>();
 
@@ -15,7 +16,8 @@ const StackRoutes = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {/* <Stack.Screen name="SignIn" component={SignInScreen} /> */}
-        <Stack.Screen name="SignUp" component={SignUpScreen} />
+        {/* <Stack.Screen name="SignUp" component={SignUpScreen} /> */}
+        <Stack.Screen name="Initial" component={InitialScreen} />
         {/* <Stack.Screen name="Initial" component={InitialScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>

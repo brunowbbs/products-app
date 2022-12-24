@@ -12,10 +12,12 @@ const Button = ({
   background = 'transparent',
   title,
   style,
+  color = 'white',
   icon,
   ...rest
 }: ButtonProps) => {
   const bgColor = COLORS[background];
+  const txtcolor = COLORS[color];
 
   return (
     <TouchableHighlight
@@ -25,7 +27,7 @@ const Button = ({
       {...rest}>
       <View style={styles.wrapper}>
         {icon && <View style={styles.containerIcon}>{icon}</View>}
-        <Text type="subtitle" style={styles.text}>
+        <Text type="subtitle" style={[styles.text, {color: txtcolor}]}>
           {title}
         </Text>
       </View>

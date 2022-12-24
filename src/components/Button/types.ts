@@ -3,6 +3,13 @@ import {TouchableHighlightProps} from 'react-native';
 
 export type ButtonProps = {
   title: string;
-  background?: 'primary' | 'secondary' | 'blue' | 'red' | 'transparent';
+  background?:
+    | 'primary'
+    | 'secondary'
+    | 'blue'
+    | 'red'
+    | 'transparent'
+    | 'white';
+  color?: 'white' | 'primary';
   icon?: ReactElement;
 } & TouchableHighlightProps;
