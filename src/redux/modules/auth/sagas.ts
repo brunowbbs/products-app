@@ -5,11 +5,13 @@ import {authUserFailure, authUserSuccess} from './actions';
 import api from '../../../services/api';
 import types from './types';
 import {AnyAction} from 'redux';
+import {replaceNavigateTo} from '../../../services/navigation';
 
 export function* authSaga({payload}: AnyAction) {
   try {
     const {data} = yield call(api.post, '/signin', payload);
     yield put(authUserSuccess(data));
+    replaceNavigateTo('Home');
   } catch (error) {
     Toast.show({
       type: 'error',

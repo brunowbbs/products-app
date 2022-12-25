@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import {Button, Input, Text} from '../../components';
+import {navigateTo} from '../../services/navigation';
 import BasicTemplate from '../../templates/Basic';
 import {COLORS} from '../../theme';
 import styles from './styles';
@@ -52,7 +53,11 @@ const SignUp = () => {
         <View style={styles.containerRegister}>
           <Text>
             Já possui cadastro?{' '}
-            <Text style={styles.textWeight}>Faça login</Text>
+            <Text
+              onPress={() => navigateTo('SignIn')}
+              style={styles.textWeight}>
+              Faça login
+            </Text>
           </Text>
         </View>
       </>

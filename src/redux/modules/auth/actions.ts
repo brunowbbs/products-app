@@ -29,3 +29,9 @@ export function authUserFailure() {
     type: types.AUTH_USER_FAILURE,
   };
 }
+
+export function authUserEmpty() {
+  return {
+    type: types.AUTH_USER_EMPTY,
+  };
+}

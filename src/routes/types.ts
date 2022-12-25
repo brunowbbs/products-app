@@ -3,6 +3,8 @@ export type RootStackParamList = {
   Initial: undefined;
   SignIn: undefined;
   SignUp: undefined;
+  Splash: undefined;
+
   // Details: {
   //   name: string;
   //   birthYear: string;

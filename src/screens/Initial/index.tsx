@@ -1,6 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {Button, Text} from '../../components';
+import {navigateTo} from '../../services/navigation';
 
 import BasicTemplate from '../../templates/Basic';
 
@@ -33,13 +34,19 @@ const InitialScreen = () => {
           </View>
 
           <View style={styles.containerButtons}>
-            <Button style={styles.full} title="Entrar" background="primary" />
+            <Button
+              style={styles.full}
+              title="Entrar"
+              background="primary"
+              onPress={() => navigateTo('SignIn')}
+            />
             <View style={styles.dividerButton} />
             <Button
               style={styles.full}
               title="Cadastrar"
               background="white"
               color="primary"
+              onPress={() => navigateTo('SignUp')}
             />
           </View>
         </View>

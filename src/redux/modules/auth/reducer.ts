@@ -28,6 +28,14 @@ function authReducer(state = INITIAL_STATE, action: Action) {
     case types.AUTH_USER_FAILURE: {
       return {...state, loading: false, error: true};
     }
+    case types.AUTH_USER_EMPTY: {
+      return {
+        ...state,
+        loading: false,
+        error: false,
+        user: {token: '', email: ''},
+      };
+    }
   }
   return state;
 }
